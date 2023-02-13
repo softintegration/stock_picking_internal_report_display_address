@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template inherit_id="stock.report_delivery_document" id="report_delivery_document_inherited">
+        <xpath expr="//t[@t-set='address']" position="before">
+            <t t-if="o.picking_type_id.report_display_address">
+                <div name="configured_display_address" class="row" style="margin-bottom:40px !important;">
+                    <div t-if="o.picking_type_id.warehouse_id.partner_id" class="col-6">
+                        <span><strong>Source Address:</strong></span>
+                        <div t-field="o.picking_type_id.warehouse_id.partner_id"
+                                t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+                    </div>
+                    <div t-if="o.location_dest_id.warehouse_id.partner_id" class="col-6">
+                        <span><strong>Destination Address:</strong></span>
+                        <div t-field="o.location_dest_id.warehouse_id.partner_id"
+                                t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>
