@@ -2,7 +2,7 @@
 
 
 {
-    'name': 'Display source and destination address in Internal pickings report',
+    'name': 'Display source and destination address pickings report',
     'author': 'Soft-integration',
     'application': True,
     'installable': True,
@@ -10,7 +10,7 @@
     'qweb': [],
     'description': False,
     'images': [],
-    'version': '1.0.1',
+    'version': '1.0.1.1',
     'category': 'Stock',
     'demo': [],
     'depends': ['stock'],
